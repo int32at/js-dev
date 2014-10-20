@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					'dist/<%= pkg.name %>-<%= pkg.version %>.min.js': ['<%= concat.dist.dest %>']
 				}
 			}
-		},
+		},		
 
 		jasmine: {
 			coverage: {
@@ -63,4 +63,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['concat', 'uglify', 'jasmine']);
+	grunt.registerTask('watch-changes', ['watch'])
 };

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 		concat: {
 			dist: {
-				src: ['src/init.js', 'src/modules/*.js'],
+				src: ['src/init.js', 'src/modules/**/*.js'],
 				dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
 			}
 		},
@@ -29,6 +29,7 @@ module.exports = function(grunt) {
 					'--ignore-ssl-errors' : true,
 					specs: 'spec/*Spec.js',
 					vendor: 'lib/*.js',
+					helpers: 'spec/helpers/*.js',
 					keepRunner: true,
 					template: require('grunt-template-jasmine-istanbul'),
 					templateOptions: {

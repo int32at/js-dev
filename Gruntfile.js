@@ -21,19 +21,12 @@ module.exports = function(grunt) {
 		},
 
 		jasmine: {
-			pivotal: {
-				src: 'dist/<%= pkg.name %>-<%= pkg.version %>.js',
-				options: {
-					specs: 'spec/*Spec.js',	
-					'--web-security' : false,
-					'--local-to-remote-url-access' : true,
-					'--ignore-ssl-errors' : true
-				}
-			},
-
 			coverage: {
 				src: 'dist/<%= pkg.name %>-<%= pkg.version %>.js',
 				options: {
+					'--web-security' : false,
+					'--local-to-remote-url-access' : true,
+					'--ignore-ssl-errors' : true,
 					specs: 'spec/*Spec.js',
 					vendor: 'lib/*.js',
 					keepRunner: true,

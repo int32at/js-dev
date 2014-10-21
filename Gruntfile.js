@@ -24,6 +24,7 @@ module.exports = function(grunt) {
 			coverage: {
 				src: 'dist/<%= pkg.name %>-<%= pkg.version %>.js',
 				options: {
+					version: "2.0.0",
 					'--web-security' : false,
 					'--local-to-remote-url-access' : true,
 					'--ignore-ssl-errors' : true,

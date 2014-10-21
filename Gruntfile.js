@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 					'--ignore-ssl-errors' : true,
 					specs: 'spec/*Spec.js',
 					vendor: 'lib/*.js',
-					helpers: 'spec/helpers/*.js',
+					helpers: 'spec/Helpers/*.js',
 					keepRunner: true,
 					template: require('grunt-template-jasmine-istanbul'),
 					templateOptions: {
